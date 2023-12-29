@@ -23,6 +23,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: hsl(240, 78%, 98%);
   padding: 3em;
+  overflow-x: hidden;
 }
 
 header::before {
@@ -78,12 +79,13 @@ header .billing-options .toggle-icon {
   display: flex;
   justify-content: flex-start;
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  border-radius: 10px;
-  width: 35px;
+  border-radius: 20px;
+  width: 55px;
   padding: 0.2em;
 }
 header .billing-options .toggle-icon .fa-solid {
   color: #fff;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 header .billing-options .toggle-icon.active {

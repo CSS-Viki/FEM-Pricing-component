@@ -46,12 +46,13 @@ header {
       display: flex;
       justify-content: flex-start;
       background: linear-gradient(to right, $Linear-Gradient);
-      border-radius: 10px;
-      width: 35px;
+      border-radius: 20px;
+      width: 55px;
       padding: 0.2em;
 
       .fa-solid {
         color: #fff;
+        font-size: 1.5rem;
         cursor: pointer;
       }
     }
