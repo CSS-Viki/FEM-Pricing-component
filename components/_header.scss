@@ -8,7 +8,7 @@ header::before {
   height: 500px;
   width: 500px;
   top: 0;
-  right: -100px;
+  right: 0;
   z-index: -999;
 }
 header::after {
@@ -62,9 +62,6 @@ header {
   }
 }
 @media (max-width: 500px) {
-  header::before {
-    right: -220px;
-  }
   header::after {
     display: none;
   }
