@@ -36,8 +36,9 @@ Users should be able to:
 
 This is my first project i have used Sass and honestly i found it more enjoyable and easy to use & understand than tailwindcss. This is my personal take though and i will be using it alot in my projects. Let me link a tutorial that helped me understand Sass 👉🏽 [Video](https://www.youtube.com/watch?v=sb4Nnc6VtZI&t=7145s)
 
-Frontend Mentor - [CSS-Viki](https://www.frontendmentor.io/profile/CSS-Viki)
-Live Site URL: - [Live site](https://your-live-site-url.com)
+- Frontend Mentor - [CSS-Viki](https://www.frontendmentor.io/profile/CSS-Viki)
+
+- Live Site URL: - [Live site](https://fem-pricing-component.onrender.com)
 
 Coded with ❤️ by [Viki Wainaina](https://twitter.com/vykiddeh_)
 
