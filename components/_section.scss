@@ -1,0 +1,100 @@
+section {
+  margin-block-start: 100px;
+
+  .cards {
+    @include flex-items();
+    gap: 26px;
+
+    .card {
+      @include card-style();
+
+      .card-content {
+        @include card-content-style();
+
+        .card-name {
+          @include card-name-style();
+        }
+        .price {
+          @include price-style();
+          @include flex-items();
+          gap: 5px;
+
+          span {
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          @include p-style();
+        }
+        button {
+          @include button-style();
+        }
+        button:hover {
+          @include button-style-hover();
+        }
+      }
+    }
+    .card-one {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .card-two {
+      background: linear-gradient(to bottom right, $Linear-Gradient);
+      transform: scale(1.15);
+
+      .card-content {
+        color: #fff;
+
+        .card-name,
+        .price,
+        p,
+        button:hover {
+          color: #fff;
+        }
+        button {
+          background: #fff;
+          color: $Dark-Grayish-Blue;
+        }
+        button:hover {
+          border: 1px solid #fff;
+          background: transparent;
+        }
+      }
+    }
+    .card-three {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  section {
+    .cards {
+      gap: 20px;
+
+      .card-one,
+      .card-three {
+        @include card-style();
+      }
+      .card-two {
+        transform: scale(1);
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  section {
+    .cards {
+      flex-direction: column;
+      gap: 20px;
+
+      .card-one,
+      .card-three {
+        @include card-style();
+      }
+      .card-two {
+        transform: scale(1);
+      }
+    }
+  }
+}

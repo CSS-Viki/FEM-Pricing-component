@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+  font-size: 0.9375rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(240, 78%, 98%);
+  padding: 3em;
+  overflow-x: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  background: url(images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
+  width: 500px;
+  top: 0;
+  right: -100px;
+  z-index: -999;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  background: url(images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  width: 300px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -999;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+header h1 {
+  color: hsl(233, 13%, 49%);
+  font-size: 1.5rem;
+}
+header .billing-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .billing-options p {
+  font-size: 0.75rem;
+  color: hsl(234, 14%, 74%);
+}
+header .billing-options .toggle-icon {
+  display: flex;
+  justify-content: flex-start;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 10px;
+  width: 35px;
+  padding: 0.2em;
+}
+header .billing-options .toggle-icon .fa-solid {
+  color: #fff;
+  cursor: pointer;
+}
+header .billing-options .toggle-icon.active {
+  justify-content: flex-end;
+  background: hsl(236, 72%, 85%);
+}
+
+@media (max-width: 500px) {
+  header::before {
+    right: -220px;
+  }
+  header::after {
+    display: none;
+  }
+}
+section {
+  margin-block-start: 100px;
+}
+section .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+}
+section .cards .card {
+  background-color: #fff;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+}
+section .cards .card .card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+section .cards .card .card-content .card-name {
+  font-size: 0.9375rem;
+  color: hsl(233, 13%, 49%);
+  margin-bottom: 30px;
+}
+section .cards .card .card-content .price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(232, 13%, 33%);
+  padding-bottom: 30px;
+  width: 100%;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+section .cards .card .card-content .price span {
+  font-size: 1.5rem;
+}
+section .cards .card .card-content p {
+  text-align: center;
+  color: hsl(233, 13%, 49%);
+  padding-block: 15px;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+  width: 100%;
+}
+section .cards .card .card-content button {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  font-size: 0.6875rem;
+  margin-top: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-block: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+section .cards .card .card-content button:hover {
+  border: 1px solid hsl(232, 13%, 33%);
+  color: hsl(232, 13%, 33%);
+  background: transparent;
+}
+section .cards .card-one {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+section .cards .card-two {
+  background: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transform: scale(1.15);
+}
+section .cards .card-two .card-content {
+  color: #fff;
+}
+section .cards .card-two .card-content .card-name,
+section .cards .card-two .card-content .price,
+section .cards .card-two .card-content p,
+section .cards .card-two .card-content button:hover {
+  color: #fff;
+}
+section .cards .card-two .card-content button {
+  background: #fff;
+  color: hsl(232, 13%, 33%);
+}
+section .cards .card-two .card-content button:hover {
+  border: 1px solid #fff;
+  background: transparent;
+}
+section .cards .card-three {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@media (max-width: 768px) {
+  section .cards {
+    gap: 20px;
+  }
+  section .cards .card-one,
+  section .cards .card-three {
+    background-color: #fff;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  section .cards .card-two {
+    transform: scale(1);
+  }
+}
+@media (max-width: 500px) {
+  section .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  section .cards .card-one,
+  section .cards .card-three {
+    background-color: #fff;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  section .cards .card-two {
+    transform: scale(1);
+  }
+}
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

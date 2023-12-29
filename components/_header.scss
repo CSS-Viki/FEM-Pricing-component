@@ -1,0 +1,71 @@
+header::before {
+  content: "";
+  position: absolute;
+  background: url(images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
+  width: 500px;
+  top: 0;
+  right: -100px;
+  z-index: -999;
+}
+header::after {
+  content: "";
+  position: absolute;
+  background: url(images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  width: 300px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -999;
+}
+header {
+  @include flex-items();
+  flex-direction: column;
+  gap: 20px;
+  
+
+  h1 {
+    color: $Grayish-Blue;
+    font-size: 1.5rem;
+  }
+  .billing-options {
+    @include flex-items();
+    gap: 20px;
+
+    p {
+      font-size: 0.75rem;
+      color: $Light-Grayish-Blue;
+    }
+    .toggle-icon {
+      display: flex;
+      justify-content: flex-start;
+      background: linear-gradient(to right, $Linear-Gradient);
+      border-radius: 10px;
+      width: 35px;
+      padding: 0.2em;
+
+      .fa-solid {
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    .toggle-icon.active {
+      justify-content: flex-end;
+      background: $Active-linear-gradient;
+    }
+  }
+}
+@media (max-width: 500px) {
+  header::before {
+    right: -220px;
+  }
+  header::after {
+    display: none;
+  }
+}

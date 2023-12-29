@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@import "components/resets";
+
+// Variables
+$Linear-Gradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+$Active-linear-gradient: hsl(236, 72%, 85%);
+$Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+$Light-Grayish-Blue: hsl(234, 14%, 74%);
+$Grayish-Blue: hsl(233, 13%, 49%);
+$Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+$Font-family: "Montserrat", sans-serif;
+$Font-size: 0.9375rem;
+
+@mixin flex-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin card-style {
+  background-color: #fff;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+}
+@mixin card-content-style {
+  @include flex-items();
+  flex-direction: column;
+  padding: 40px 20px;
+}
+@mixin card-name-style {
+  font-size: $Font-size;
+  color: $Grayish-Blue;
+  margin-bottom: 30px;
+}
+@mixin price-style {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $Dark-Grayish-Blue;
+  padding-bottom: 30px;
+  width: 100%;
+  border-bottom: 1px solid $Light-Grayish-Blue;
+}
+@mixin p-style {
+  text-align: center;
+  color: $Grayish-Blue;
+  padding-block: 15px;
+  border-bottom: 1px solid $Light-Grayish-Blue;
+  width: 100%;
+}
+@mixin button-style {
+  font-family: $Font-family;
+  background: linear-gradient(to right, $Linear-Gradient);
+  color: #fff;
+  font-size: .6875rem;
+  margin-top: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-block: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+@mixin button-style-hover {
+  border: 1px solid $Dark-Grayish-Blue;
+  color: $Dark-Grayish-Blue;
+  background: transparent;
+}
+body {
+  position: relative;
+  font-size: $Font-size;
+  font-family: $Font-family;
+  background-color: $Very-Light-Grayish-Blue;
+  padding: 3em;
+  overflow-x: hidden;
+}
+
+
+@import "components/header";
+@import "components/section";
+
+// Attribution
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 50px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
