@@ -1,9 +1,8 @@
 const toggleClass = document.querySelector(".toggle-icon");
-const icon = document.querySelector(".fa-solid");
 const cards = document.querySelector(".cards");
 const price = cards.querySelectorAll(".price");
 
-icon.addEventListener("click", () => {
+toggleClass.addEventListener("click", () => {
   toggleClass.classList.toggle("active");
   if (toggleClass.classList.contains("active")) {
     price.forEach((item) => {

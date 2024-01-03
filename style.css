@@ -82,11 +82,11 @@ header .billing-options .toggle-icon {
   border-radius: 20px;
   width: 55px;
   padding: 0.2em;
+  cursor: pointer;
 }
 header .billing-options .toggle-icon .fa-solid {
   color: #fff;
   font-size: 1.5rem;
-  cursor: pointer;
 }
 header .billing-options .toggle-icon.active {
   justify-content: flex-end;
